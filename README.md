@@ -10,126 +10,195 @@
 
 ## Function Descriptions
 
-### Task 0: Pre-order Traversal
+### Task 0: New node (0-binary_tree_node.c)
 
-`void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));`
+**Description:**
+Create a binary tree node and return a pointer to it.
 
-This function performs a pre-order traversal of a binary tree and applies a given function to each node.
+**Prototype:**
+```c
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+```
 
-### Task 1: In-order Traversal
+### Task 1: Insert left (1-binary_tree_insert_left.c)
 
-`void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));`
+**Description:**
+Insert a node as the left-child of another node.
 
-This function performs an in-order traversal of a binary tree and applies a given function to each node.
+**Prototype:**
+```c
+binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
+```
 
-### Task 2: Post-order Traversal
+### Task 2: Insert right (2-binary_tree_insert_right.c)
 
-`void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));`
+**Description:**
+Insert a node as the right-child of another node.
 
-This function performs a post-order traversal of a binary tree and applies a given function to each node.
+**Prototype:**
+```c
+binary_tree_t *binary_tree_insert_right(binary_tree_t *parent, int value);
+```
 
-### Task 3: Measure Tree Height
+### Task 3: Delete (3-binary_tree_delete.c)
 
-`size_t binary_tree_height(const binary_tree_t *tree);`
+**Description:**
+Delete an entire binary tree.
 
-This function measures the height of a binary tree.
+**Prototype:**
+```c
+void binary_tree_delete(binary_tree_t *tree);
+```
 
-### Task 4: Measure Node Depth
+### Task 4: Is leaf (4-binary_tree_is_leaf.c)
 
-`size_t binary_tree_depth(const binary_tree_t *tree);`
+**Description:**
+Check if a node is a leaf.
 
-This function measures the depth of a given node in a binary tree.
+**Prototype:**
+```c
+int binary_tree_is_leaf(const binary_tree_t *node);
+```
 
-### Task 5: Measure Tree Size
+### Task 5: Is root (5-binary_tree_is_root.c)
 
-`size_t binary_tree_size(const binary_tree_t *tree);`
+**Description:**
+Check if a given node is a root.
 
-This function measures the size of a binary tree.
+**Prototype:**
+```c
+int binary_tree_is_root(const binary_tree_t *node);
+```
 
-### Task 6: Count Leaves
+### Task 6: Pre-order traversal (6-binary_tree_preorder.c)
 
-`size_t binary_tree_leaves(const binary_tree_t *tree);`
+**Description:**
+Traverse a binary tree using pre-order traversal.
 
-This function counts the number of leaf nodes in a binary tree.
+**Prototype:**
+```c
+void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int));
+```
 
-### Task 7: Count Nodes with Children
+### Task 7: In-order traversal (7-binary_tree_inorder.c)
 
-`size_t binary_tree_nodes(const binary_tree_t *tree);`
+**Description:**
+Traverse a binary tree using in-order traversal.
 
-This function counts the number of nodes with at least one child in a binary tree.
+**Prototype:**
+```c
+void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int));
+```
 
-### Task 8: Measure Balance Factor
+### Task 8: Post-order traversal (8-binary_tree_postorder.c)
 
-`int binary_tree_balance(const binary_tree_t *tree);`
+**Description:**
+Traverse a binary tree using post-order traversal.
 
-This function measures the balance factor of a binary tree.
+**Prototype:**
+```c
+void binary_tree_postorder(const binary_tree_t *tree, void (*func)(int));
+```
 
-### Task 9: Check for Full Tree
+### Task 9: Height (9-binary_tree_height.c)
 
-`int binary_tree_is_full(const binary_tree_t *tree);`
+**Description:**
+Determine the height of a binary tree.
 
-This function checks if a binary tree is full, meaning each node has 0 or 2 children.
+**Prototype:**
+```c
+size_t binary_tree_height(const binary_tree_t *tree);
+```
 
-### Task 10: Check for Perfect Tree
+### Task 10: Depth (10-binary_tree_depth.c)
 
-`int binary_tree_is_perfect(const binary_tree_t *tree);`
+**Description:**
+Determine the depth of a given node in a binary tree.
 
-This function checks if a binary tree is perfect, meaning all leaf nodes are at the same depth.
+**Prototype:**
+```c
+size_t binary_tree_depth(const binary_tree_t *tree);
+```
 
-### Task 11: Find Sibling
+### Task 11: Size (11-binary_tree_size.c)
 
-`binary_tree_t *binary_tree_sibling(binary_tree_t *node);`
+**Description:**
+Determine the size of a binary tree.
 
-This function finds the sibling of a given node in a binary tree.
+**Prototype:**
+```c
+size_t binary_tree_size(const binary_tree_t *tree);
+```
 
-### Task 12: Find Uncle
+### Task 12: Leaves (12-binary_tree_leaves.c)
 
-`binary_tree_t *binary_tree_uncle(binary_tree_t *node);`
+**Description:**
+Determine the number of leaves in a binary tree.
 
-This function finds the uncle of a given node in a binary tree.
+**Prototype:**
+```c
+size_t binary_tree_leaves(const binary_tree_t *tree);
+```
 
-### Task 13: Find Lowest Common Ancestor
+### Task 13: Nodes (13-binary_tree_nodes.c)
 
-`binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second);
-`
+**Description:**
+Determine the number of nodes with at least one child in a binary tree.
 
-This function should find the lowest common ancestor of two nodes in a binary tree.
+**Prototype:**
+```c
+size_t binary_tree_nodes(const binary_tree_t *tree);
+```
 
-### Task 14: Find Level of Node
+### Task 14: Balance factor (14-binary_tree_balance.c)
 
-`int binary_tree_depth(const binary_tree_t *node);
-`
+**Description:**
+Determine the balance factor of a binary tree.
 
-This function should find the level or depth of a specific node in a binary tree.
+**Prototype:**
+```c
+int binary_tree_balance(const binary_tree_t *tree);
+```
 
-### Task 15: Check if Binary Tree is Perfect
+### Task 15: Is full (15-binary_tree_is_full.c)
 
-`int binary_tree_is_perfect(const binary_tree_t *tree);
-`
+**Description:**
+Check if a binary tree is full.
 
-This function should check if a binary tree is perfect, meaning all leaf nodes are at the same depth, and the tree is full.
+**Prototype:**
+```c
+int binary_tree_is_full(const binary_tree_t *tree);
+```
 
-### Task 16: Create a Sorted Array from Binary Search Tree (BST)
+### Task 16: Rotate left (16-binary_tree_rotate_left.c)
 
-`int *tree_to_array(const binary_tree_t *tree, int *n);
-`
+**Description:**
+Perform a left-rotation on a binary tree.
 
-This function should create an array of integers from a binary search tree (BST) in sorted order.
+**Prototype:**
+```c
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
+```
 
-### Task 17: Create a Balanced Binary Search Tree from Sorted Array
+### Task 17: Rotate right (17-binary_tree_rotate_right.c)
 
-`binary_tree_t *sorted_array_to_avl(int *array, size_t size);
-`
+**Description:**
+Perform a right-rotation on a binary tree.
 
-This function should create a balanced binary search tree (AVL tree) from a sorted array of integers.
+**Prototype:**
+```c
+binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+```
 
-### Task 18: Check if Binary Tree is AVL Tree
+### Task 18: Is perfect (18-binary_tree_is_perfect.c)
 
-`int binary_tree_is_avl(const binary_tree_t *tree);
-`
+**Description:**
+Check if a binary tree is perfect.
 
-This function should check if a given binary tree is an AVL tree, which means it is a balanced binary search tree.
-
+**Prototype:**
+```c
+int binary_tree_is_perfect(const binary_tree_t *tree);
+```
 
 ## Usage
 
